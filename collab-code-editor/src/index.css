@@ -70,6 +70,9 @@
   --syntax-attr: #fbbf24;
   --syntax-property: #93c5fd;
 
+  /* Added for Task 4 — collaborators right rail */
+  --ws-collab-width: 240px;
+
   color-scheme: dark;
 }
 

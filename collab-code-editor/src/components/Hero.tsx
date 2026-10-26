@@ -3,29 +3,11 @@ import CodePreview from "./CodePreview";
 import styles from "./Hero.module.css";
 
 interface HeroProps {
-  onCreateRoom?: () => void;
-  onJoinRoom?: () => void;
+  onCreateRoom: () => void;
+  onJoinRoom: () => void;
 }
 
 function Hero({ onCreateRoom, onJoinRoom }: HeroProps) {
-  const handleCreateRoom = () => {
-    if (onCreateRoom) {
-      onCreateRoom();
-      return;
-    }
-    // eslint-disable-next-line no-alert
-    alert("Create Room — coming soon!");
-  };
-
-  const handleJoinRoom = () => {
-    if (onJoinRoom) {
-      onJoinRoom();
-      return;
-    }
-    // eslint-disable-next-line no-alert
-    alert("Join Room — coming soon!");
-  };
-
   return (
     <section className={styles.hero}>
       <div className={styles.inner}>
@@ -47,10 +29,10 @@ function Hero({ onCreateRoom, onJoinRoom }: HeroProps) {
           </p>
 
           <div className={styles.actions}>
-            <Button variant="primary" onClick={handleCreateRoom}>
+            <Button variant="primary" onClick={onCreateRoom}>
               Create Room
             </Button>
-            <Button variant="secondary" onClick={handleJoinRoom}>
+            <Button variant="secondary" onClick={onJoinRoom}>
               Join Room
             </Button>
           </div>

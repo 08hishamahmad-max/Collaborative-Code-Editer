@@ -4,17 +4,13 @@ import styles from "./TopBar.module.css";
 
 interface TopBarProps {
   roomName: string;
+  roomId: string;
   onLeave: () => void;
+  onShare: () => void;
 }
 
-function TopBar({ roomName, onLeave }: TopBarProps) {
+function TopBar({ roomName, roomId, onLeave, onShare }: TopBarProps) {
   const [status] = useState<ConnectionStatus>("connected");
-
-  const handleShare = () => {
-    // Mock: in a future task this will copy the real room URL.
-    // eslint-disable-next-line no-alert
-    alert("Share link copied (mock)");
-  };
 
   const statusLabel: Record<ConnectionStatus, string> = {
     connected: "Connected",
@@ -41,7 +37,12 @@ function TopBar({ roomName, onLeave }: TopBarProps) {
 
         <span className={styles.room}>
           <span className={styles.roomLabel}>Room</span>
-          <span className={styles.roomName}>{roomName}</span>
+          <span className={styles.roomName} title={roomName}>
+            {roomName}
+          </span>
+          <span className={styles.roomId} title={`Room ID: ${roomId}`}>
+            #{roomId}
+          </span>
         </span>
       </div>
 
@@ -57,7 +58,7 @@ function TopBar({ roomName, onLeave }: TopBarProps) {
         <button
           type="button"
           className={styles.shareButton}
-          onClick={handleShare}
+          onClick={onShare}
         >
           Share
         </button>
