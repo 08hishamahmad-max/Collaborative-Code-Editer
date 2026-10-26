@@ -1,0 +1,128 @@
+.sidebar {
+  width: var(--ws-sidebar-width);
+  background-color: var(--ws-panel-alt);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width 0.15s ease;
+  overflow: hidden;
+}
+
+.collapsed {
+  width: var(--ws-sidebar-width-collapsed);
+}
+
+.header {
+  height: var(--ws-tabs-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.toggle {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.toggle:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  padding: var(--space-3) var(--space-4) var(--space-2);
+}
+
+.fileList {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--space-2);
+  overflow-y: auto;
+}
+
+.fileItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.fileItem:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.active {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: var(--color-text);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  background-color: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.active .icon {
+  background-color: rgba(99, 102, 241, 0.25);
+  color: var(--color-primary-hover);
+}
+
+.fileName {
+  font-family: var(--font-mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Hide sidebar entirely on very narrow screens — users can still switch via tabs */
+@media (max-width: 560px) {
+  .sidebar {
+    display: none;
+  }
+}

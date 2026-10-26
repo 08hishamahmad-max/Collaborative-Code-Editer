@@ -1,0 +1,50 @@
+.viewer {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  background-color: var(--ws-bg);
+}
+
+.pre {
+  margin: 0;
+  padding: var(--space-4) 0;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--syntax-punct);
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: baseline;
+}
+
+.line:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.lineNumber {
+  user-select: none;
+  text-align: right;
+  padding-right: var(--space-4);
+  color: var(--color-text-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+.lineContent {
+  white-space: pre;
+  padding-right: var(--space-4);
+}
+
+/* ---------- Syntax token classes ---------- */
+.keyword  { color: var(--syntax-keyword); }
+.string   { color: var(--syntax-string); }
+.comment  { color: var(--syntax-comment); font-style: italic; }
+.number   { color: var(--syntax-number); }
+.function { color: var(--syntax-function); }
+.tag      { color: var(--syntax-tag); }
+.attr     { color: var(--syntax-attr); }
+.property { color: var(--syntax-property); }
+.text     { color: var(--syntax-punct); }

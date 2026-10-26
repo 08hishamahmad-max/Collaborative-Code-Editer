@@ -1,0 +1,29 @@
+.footer {
+  margin-top: auto;
+  padding: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-elevated);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text-subtle);
+  font-size: 13px;
+}
+
+@media (min-width: 640px) {
+  .inner {
+    flex-direction: row;
+  }
+}
+
+.copy,
+.builtWith {
+  margin: 0;
+}

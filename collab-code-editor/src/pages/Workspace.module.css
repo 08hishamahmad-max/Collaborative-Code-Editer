@@ -1,0 +1,41 @@
+.workspace {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ws-bg);
+  color: var(--color-text);
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  min-height: 0; /* allow children to shrink inside flex */
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* critical: lets the editor area shrink horizontally */
+}
+
+.statusBar {
+  height: var(--ws-statusbar-height);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 0 var(--space-4);
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    #4f46e5 100%
+  );
+  color: #fff;
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+
+.statusSpacer {
+  flex: 1;
+}
