@@ -1,0 +1,157 @@
+PROJECT STATE DUMP - CollabCode
+------------------------------------------
+--- FILE: src/App.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/pages/Workspace.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/pages/Workspace.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/index.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/TopBar.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/TopBar.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/Sidebar.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/Sidebar.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/EditorArea.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/EditorArea.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/CodeViewer.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/CodeViewer.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/BottomPanel.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/BottomPanel.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/CollaboratorsPanel.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/workspace/CollaboratorsPanel.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Modal.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Modal.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Toast.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Toast.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Button.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Button.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Hero.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Hero.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Header.tsx ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/components/Header.module.css ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/types/workspace.ts ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/data/mockRooms.ts ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: src/data/mockFiles.ts ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: package.json ---
+FILE NOT FOUND
+
+------------------------------------------
+
+--- FILE: tsconfig.json ---
+FILE NOT FOUND
+
+------------------------------------------
+

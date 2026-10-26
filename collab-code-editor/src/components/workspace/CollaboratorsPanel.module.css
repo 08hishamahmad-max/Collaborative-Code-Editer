@@ -48,8 +48,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
-  padding: var(--space-4) var(--space-4) var(--space-2);
+  padding: var(--space-4) var(--space-4) var(--space-3);
 }
+
 
 .mockBadge {
   display: inline-flex;
@@ -79,7 +80,10 @@
   gap: var(--space-3);
   padding: 8px 10px;
   border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease;
+  cursor: default;
 }
+
 
 .row:hover {
   background-color: var(--color-surface);

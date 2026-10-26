@@ -126,12 +126,20 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .shareButton:hover {
   background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.shareButton:active {
+  transform: translateY(0);
+  filter: brightness(0.9);
+}
+
 
 .avatar {
   width: 30px;
