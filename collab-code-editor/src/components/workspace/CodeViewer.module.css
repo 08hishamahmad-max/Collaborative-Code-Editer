@@ -1,50 +1,32 @@
-.viewer {
+.container {
   flex: 1;
   min-height: 0;
   min-width: 0;
-  overflow: auto;
-  background-color: var(--ws-bg);
+  overflow: hidden;
 }
 
-.pre {
-  margin: 0;
-  padding: var(--space-4) 0;
-  font-family: var(--font-mono);
-  font-size: 13.5px;
-  line-height: 1.65;
-  color: var(--syntax-punct);
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-family: var(--font-sans);
 }
 
-.line {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  align-items: baseline;
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-border-strong);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-.line:hover {
-  background-color: rgba(255, 255, 255, 0.02);
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.lineNumber {
-  user-select: none;
-  text-align: right;
-  padding-right: var(--space-4);
-  color: var(--color-text-subtle);
-  font-variant-numeric: tabular-nums;
-}
-
-.lineContent {
-  white-space: pre;
-  padding-right: var(--space-4);
-}
-
-/* ---------- Syntax token classes ---------- */
-.keyword  { color: var(--syntax-keyword); }
-.string   { color: var(--syntax-string); }
-.comment  { color: var(--syntax-comment); font-style: italic; }
-.number   { color: var(--syntax-number); }
-.function { color: var(--syntax-function); }
-.tag      { color: var(--syntax-tag); }
-.attr     { color: var(--syntax-attr); }
-.property { color: var(--syntax-property); }
-.text     { color: var(--syntax-punct); }
