@@ -1,0 +1,168 @@
+.layout {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #070a12;
+  color: #e6e8ee;
+  display: flex;
+  flex-direction: column;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  isolation: isolate;
+}
+
+/* Subtle grid pattern */
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Large soft indigo glow (top-right-ish) */
+.glowOne {
+  position: absolute;
+  top: -220px;
+  right: -180px;
+  width: 720px;
+  height: 720px;
+  background: radial-gradient(
+    closest-side,
+    rgba(99, 102, 241, 0.35),
+    rgba(99, 102, 241, 0) 70%
+  );
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Large soft cyan glow (bottom-left-ish) */
+.glowTwo {
+  position: absolute;
+  bottom: -260px;
+  left: -200px;
+  width: 760px;
+  height: 760px;
+  background: radial-gradient(
+    closest-side,
+    rgba(34, 211, 238, 0.22),
+    rgba(34, 211, 238, 0) 70%
+  );
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Decorative code snippet (desktop only) */
+.codeDecor {
+  position: absolute;
+  left: 48px;
+  bottom: 72px;
+  margin: 0;
+  padding: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: rgba(230, 232, 238, 0.35);
+  pointer-events: none;
+  user-select: none;
+  white-space: pre;
+  z-index: 0;
+}
+
+.codeDim { color: rgba(230, 232, 238, 0.25); font-style: italic; }
+.codeKeyword { color: rgba(192, 132, 252, 0.65); }
+.codeVar { color: rgba(230, 232, 238, 0.55); }
+.codeFn { color: rgba(147, 197, 253, 0.65); }
+.codeStr { color: rgba(134, 239, 172, 0.55); }
+
+/* Layout chrome */
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: #070a12;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 8px 24px -8px rgba(99, 102, 241, 0.6);
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  padding: 20px 32px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(230, 232, 238, 0.45);
+  font-size: 12.5px;
+}
+
+.footerDot {
+  color: rgba(230, 232, 238, 0.25);
+}
+
+.footerLink {
+  color: rgba(230, 232, 238, 0.6);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footerLink:hover {
+  color: #e6e8ee;
+}
+
+@media (max-width: 900px) {
+  .codeDecor {
+    display: none;
+  }
+  .header {
+    padding: 20px 20px;
+  }
+}

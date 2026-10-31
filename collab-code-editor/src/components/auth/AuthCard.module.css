@@ -1,0 +1,95 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+.glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.5),
+    rgba(34, 211, 238, 0.35) 50%,
+    rgba(99, 102, 241, 0.2)
+  );
+  filter: blur(16px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  border-radius: 18px;
+  padding: 32px;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 26, 35, 0.85),
+    rgba(17, 20, 27, 0.85)
+  );
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  animation: cardIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f3f4f8;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: rgba(230, 232, 238, 0.65);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  color: rgba(230, 232, 238, 0.65);
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+  .title {
+    font-size: 1.35rem;
+  }
+}

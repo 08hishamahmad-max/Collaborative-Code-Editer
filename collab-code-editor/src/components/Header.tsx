@@ -1,6 +1,11 @@
 import styles from "./Header.module.css";
 
-function Header() {
+interface HeaderProps {
+  onSignUpClick?: () => void;
+  onSignInClick?: () => void;
+}
+
+function Header({ onSignUpClick, onSignInClick }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
@@ -12,6 +17,20 @@ function Header() {
         </a>
 
         <nav className={styles.nav} aria-label="Primary">
+          <button
+            className={styles.navLink}
+            onClick={onSignInClick}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', color: 'inherit' }}
+          >
+            Sign In
+          </button>
+          <button
+            className={styles.navLink}
+            onClick={onSignUpClick}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', color: 'inherit' }}
+          >
+            Sign Up
+          </button>
           <a
             className={styles.navLink}
             href="https://github.com"

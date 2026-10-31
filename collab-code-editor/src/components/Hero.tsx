@@ -3,11 +3,10 @@ import CodePreview from "./CodePreview";
 import styles from "./Hero.module.css";
 
 interface HeroProps {
-  onCreateRoom: () => void;
-  onJoinRoom: () => void;
+  onGetStarted: () => void;
 }
 
-function Hero({ onCreateRoom, onJoinRoom }: HeroProps) {
+function Hero({ onGetStarted }: HeroProps) {
   return (
     <section className={styles.hero}>
       <div className={styles.inner}>
@@ -29,13 +28,11 @@ function Hero({ onCreateRoom, onJoinRoom }: HeroProps) {
           </p>
 
           <div className={styles.actions}>
-            <Button variant="primary" onClick={onCreateRoom}>
-              Create Room
-            </Button>
-            <Button variant="secondary" onClick={onJoinRoom}>
-              Join Room
+            <Button variant="primary" onClick={onGetStarted}>
+              Get Started
             </Button>
           </div>
+
         </div>
 
         <div className={styles.preview}>
